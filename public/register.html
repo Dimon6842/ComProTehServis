@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - ComProTehServis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/лого.webp" alt="ComProTehServis Logo">
+                    <div class="logo-text">ComProTeh<span>Servis</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="login.html">Вход</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Section -->
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <form class="auth-form" id="registerForm">
+                    <h2>Создание аккаунта</h2>
+                    
+                    <div class="form-group">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" placeholder="Введите ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Введите ваш email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" placeholder="Создайте пароль" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmPassword">Подтверждение пароля</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Повторите пароль" required>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                    
+                    <div class="auth-links">
+                        <p>Уже есть аккаунт? <a href="login.html">Войти</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="image/лого.webp" alt="ComProTehServis Logo" style="height: 40px;">
+                        <div class="logo-text" style="color: white;">ComProTeh<span>Servis</span></div>
+                    </div>
+                    <p style="color: #bdc3c7; margin-top: 15px;">Профессиональный ремонт компьютеров и техники с гарантией качества</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services W">Ремонт компьютеров</a></li>
+                        <li><a href="#services">Ремонт ноутбуков</a></li>
+                        <li><a href="#services">Установка ПО</a></li>
+                        <li><a href="#services">Сборка пк</a></li>
+                        <li><a href="#services">Восстановление данных</a></li>
+                        <li><a href="#services">Настройка сети</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Пн-Пт: 9:00 - 18:00</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Сб-Вс: выходной</p>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Связаться с нами</h3>
+                    <ul>
+                        <p style="color: #bdc3c7; margin-top: 15px;">+7 (990) 110-44-64</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <li>
+                            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                <a href="https://vk.com/cpts.servis1" style="color: white;"><i class="fab fa-vk"></i></a>
+                                <a href="https://t.me/cpts_servis" style="color: white;"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ComProTehServis (CPTS). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

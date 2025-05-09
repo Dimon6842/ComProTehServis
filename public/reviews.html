@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы - ComProTehServis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/лого.webp" alt="ComProTehServis Logo">
+                    <div class="logo-text">ComProTeh<span>Servis</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="reviews.html" class="active">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <div id="header-user">
+                        <a href="login.html" id="login-button">Вход</a>
+                        <img id="user-avatar" src="" alt="avatar" style="display:none; width:40px; height:40px; border-radius:50%; cursor:pointer;">
+                      </div>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Reviews Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>Отзывы наших клиентов</h1>
+            <p>Узнайте, что говорят о нас наши клиенты, и поделитесь своим опытом</p>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <!-- Review Form -->
+            <div class="review-form">
+                <h2>Оставьте ваш отзыв</h2>
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewText">Ваш отзыв</label>
+                        <textarea id="reviewText" class="form-control" rows="5" placeholder="Поделитесь вашим опытом с нашим сервисом" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Оценка</label>
+                        <div class="stars">
+                            <input type="radio" id="star5" name="rating" value="5" required>
+                            <label for="star5"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star4" name="rating" value="4">
+                            <label for="star4"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star3" name="rating" value="3">
+                            <label for="star3"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star2" name="rating" value="2">
+                            <label for="star2"><i class="fas fa-star"></i></label>
+                            <input type="radio" id="star1" name="rating" value="1">
+                            <label for="star1"><i class="fas fa-star"></i></label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-accent">Отправить отзыв</button>
+                </form>
+            </div>
+            
+            <!-- Reviews List -->
+            <div class="review-list" id="reviewList">
+                <!-- Отзывы будут загружаться здесь -->
+            </div>
+        </div> 
+        
+    </section>
+
+    <!-- Auth Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <span id="closeAuthModal" class="modal-close">&times;</span>
+            <h2>Требуется авторизация</h2>
+            <p>Чтобы оставить отзыв, пожалуйста, войдите или зарегистрируйтесь</p>
+            <div class="modal-buttons">
+                <button id="loginBtn" class="btn btn-primary">Войти</button>
+                <button id="registerBtn" class="btn btn-accent">Зарегистрироваться</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="image/лого.webp" alt="ComProTehServis Logo" style="height: 40px;">
+                        <div class="logo-text" style="color: white;">ComProTeh<span>Servis</span></div>
+                    </div>
+                    <p style="color: #bdc3c7; margin-top: 15px;">Профессиональный ремонт компьютеров и техники с гарантией качества</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Ремонт компьютеров</a></li>
+                        <li><a href="#services">Ремонт ноутбуков</a></li>
+                        <li><a href="#services">Установка ПО</a></li>
+                        <li><a href="#services">Сборка ПК</a></li>
+                        <li><a href="#services">Восстановление данных</a></li>
+                        <li><a href="#services">Настройка сети</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Пн-Пт: 9:00 - 18:00</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Сб-Вс: выходной</p>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Связаться с нами</h3>
+                    <ul>
+                        <p style="color: #bdc3c7; margin-top: 15px;">+7 (990) 110-44-64</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <li>
+                            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                <a href="https://vk.com/cpts.servis1" style="color: white;"><i class="fab fa-vk"></i></a>
+                                <a href="https://t.me/cpts_servis" style="color: white;"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ComProTehServis (CPTS). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>

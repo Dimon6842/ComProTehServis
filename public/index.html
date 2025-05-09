@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComProTehServis - Ремонт компьютеров и техники</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/лого.webp" alt="ComProTehServis Logo">
+                    <div class="logo-text">ComProTeh<span>Servis</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Главная</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <div id="header-user">
+                        <a href="login.html" id="login-button">Вход</a>
+                        <img id="user-avatar" src="" alt="avatar" style="display:none; width:40px; height:40px; border-radius:50%; cursor:pointer;">
+                      </div>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Профессиональный ремонт компьютеров и техники</h1>
+                <p>Качественный сервис с гарантией. Мы устраним любые неполадки быстро и по доступным ценам.</p>
+                <a href="#services" class="btn btn-accent">Наши услуги</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши услуги</h2>
+                <p>Мы предлагаем полный спектр услуг по ремонту и обслуживанию компьютерной техники для частных лиц и организаций</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 1.jpg" alt="Ремонт компьютеров">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Ремонт компьютеров</h3>
+                        <p>Диагностика и устранение неисправностей, замена комплектующих, модернизация ПК</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 2.jpg" alt="Ремонт ноутбуков">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Ремонт ноутбуков</h3>
+                        <p>Замена экрана, клавиатуры, ремонт материнской платы, чистка от пыли</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 3.jpg" alt="Установка ПО">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Установка ПО</h3>
+                        <p>Установка операционных систем, драйверов, программного обеспечения</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 4.webp" alt="Сборка ПК">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Сборка ПК</h3>
+                        <p>Сборка персонализированных ПК под любые задачи</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 5 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 5.webp" alt="Восстановление данных">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Восстановление данных</h3>
+                        <p>Восстановление информации с повреждённых носителей</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+
+                <!-- Service Card 6 -->
+                <div class="service-card">
+                    <div class="service-card-img">
+                        <img src="image/услуга 6.jpg" alt="Настройка сети">
+                    </div>
+                    <div class="service-card-content">
+                        <h3>Настройка сети</h3>
+                        <p>Настройка локальной сети, Wi-Fi, подключение устройств</p>
+                        <a href="#orderSection" class="btn">Заказать</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Form Section -->
+    <section id="orderSection" class="order-form-section">
+        <div class="container">
+            <div class="order-form-container">
+                <form class="form" id="order-form">
+                    <h2>Оформление заказа</h2>
+                  
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Введите ваше имя" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Введите ваш email" required>
+                      </div>
+                    </div>
+                  
+                    <div class="form-row">
+                      <div class="form-group">
+                        <label for="telegram">Telegram</label>
+                        <input type="text" id="telegram" name="telegram" class="form-control" placeholder="Введите ваш @Telegram" required>
+                      </div>
+                  
+                      <div class="form-group">
+                        <label for="service">Услуга</label>
+                        <select id="service" name="service" class="form-control" required>
+                          <option value="">Выберите услугу</option>
+                          <option value="pc_repair">Ремонт компьютера</option>
+                          <option value="laptop_repair">Ремонт ноутбука</option>
+                          <option value="software">Установка ПО</option>
+                          <option value="pc_assembly">Сборка ПК</option>
+                          <option value="data_recovery">Восстановление данных</option>
+                          <option value="network_setup">Настройка сети</option>
+                        </select>
+                      </div>
+                    </div>
+                  
+                    <div class="form-group">
+                      <label for="message">Описание проблемы</label>
+                      <textarea id="message" name="message" class="form-control" rows="5" placeholder="Опишите вашу проблему"></textarea>
+                    </div>
+                  
+                    <button type="submit" class="btn btn-accent">Отправить заказ</button>
+                  </form>                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Связаться с нами</h2>
+                <p>Есть вопросы? Свяжитесь с нами любым удобным для вас способом</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Контактная информация</h3>
+                    <p>Мы всегда рады помочь вам с вашими техническими проблемами. Позвоните нам или отправьте сообщение, и наши специалисты свяжутся с вами в ближайшее время.</p>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <p>г. Мелитополь</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <p>+7 (990) 110-44-64</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <p>@cpts_servis</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <p>Пн-Пт: 9:00 - 18:00</p>
+                            <p>Сб-Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form" method="POST">
+                    <h3>Отправьте нам сообщение</h3>
+                    
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Ваше имя" required>
+                    </div>
+                  
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Ваш Email" required>
+                    </div>
+                  
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="telegram" name="telegram" placeholder="Ваш @Telegram">
+                    </div>
+                  
+                    <div class="form-group">
+                        <textarea class="form-control" id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                    </div>
+                  
+                    <button type="submit" class="btn">Отправить</button>
+                </form>                  
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="image/лого.webp" alt="ComProTehServis Logo" style="height: 40px;">
+                        <div class="logo-text" style="color: white;">ComProTeh<span>Servis</span></div>
+                    </div>
+                    <p style="color: #bdc3c7; margin-top: 15px;">Профессиональный ремонт компьютеров и техники с гарантией качества</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Ремонт компьютеров</a></li>
+                        <li><a href="#services">Ремонт ноутбуков</a></li>
+                        <li><a href="#services">Установка ПО</a></li>
+                        <li><a href="#services">Сборка ПК</a></li>
+                        <li><a href="#services">Восстановление данных</a></li>
+                        <li><a href="#services">Настройка сети</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Пн-Пт: 9:00 - 18:00</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Сб-Вс: выходной</p>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Связаться с нами</h3>
+                    <ul>
+                        <p style="color: #bdc3c7; margin-top: 15px;">+7 (990) 110-44-64</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <li>
+                            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                <a href="https://vk.com/cpts.servis1" style="color: white;"><i class="fab fa-vk"></i></a>
+                                <a href="https://t.me/cpts_servis" style="color: white;"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ComProTehServis (CPTS). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

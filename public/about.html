@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - ComProTehServis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/лого.webp" alt="ComProTehServis Logo">
+                    <div class="logo-text">ComProTeh<span>Servis</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="about.html" class="active">О нас</a></li>
+                    <div id="header-user">
+                        <a href="login.html" id="login-button">Вход</a>
+                        <img id="user-avatar" src="" alt="avatar" style="display:none; width:40px; height:40px; border-radius:50%; cursor:pointer;">
+                      </div>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="about-hero">
+        <div class="container">
+            <h1>О компании ComProTehServis</h1>
+            <p>Мы команда профессионалов с многолетним опытом в сфере ремонта и обслуживания компьютерной техники</p>
+        </div>
+    </section>
+
+    <section class="about-content">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="image/о нас.jpg" alt="О нашей компании">
+                </div>
+                <div class="about-text">
+                    <h2>Почему выбирают нас?</h2>
+                    <p>Компания <strong>ComProTehServis</strong> (CPTS) работает на рынке ремонта компьютерной техники уже более 10 лет. За это время мы накопили огромный опыт в решении самых сложных технических проблем.</p>
+                    <p>Наша команда состоит из сертифицированных инженеров и технических специалистов, которые постоянно повышают свою квалификацию, чтобы быть в курсе последних технологических тенденций.</p>
+                    <p>Мы гордимся своей репутацией и стремимся превзойти ожидания каждого клиента, обеспечивая:</p>
+                    <ul style="list-style-type: disc; margin-left: 20px; margin-bottom: 20px;">
+                        <li>Быструю и точную диагностику</li>
+                        <li>Прозрачное ценообразование без скрытых платежей</li>
+                        <li>Гарантию на все виды работ</li>
+                        <li>Использование только оригинальных комплектующих</li>
+                        <li>Выезд на дом или в офис</li>
+                        <li>Техническую поддержку после ремонта</li>
+                    </ul>
+                    <a href="index.html#orderSection" class="btn btn-accent">Заказать услугу</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background-color: #f5f5f5;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Наши преимущества</h2>
+                <p>Что отличает нас от других сервисных центров</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 50px;">
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Быстрый сервис</h3>
+                    <p style="color: #7f8c8d;">Мы ценим ваше время. В большинстве случаев ремонт выполняется в течение 24 часов с момента обращения.</p>
+                </div>
+                
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Гарантия качества</h3>
+                    <p style="color: #7f8c8d;">На все виды работ мы предоставляем гарантию до 12 месяцев. Ваша техника в надежных руках.</p>
+                </div>
+                
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Честные цены</h3>
+                    <p style="color: #7f8c8d;">Никаких скрытых платежей и дополнительных расходов. Стоимость услуг фиксируется при оформлении заказа.</p>
+                </div>
+                
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Опытные специалисты</h3>
+                    <p style="color: #7f8c8d;">Наши мастера имеют многолетний опыт и регулярно проходят обучение у ведущих производителей техники.</p>
+                </div>
+                
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Выезд на дом</h3>
+                    <p style="color: #7f8c8d;">Мы работаем там, где удобно вам. Наши специалисты могут приехать к вам домой или в офис в удобное время.</p>
+                </div>
+                
+                <div style="background-color: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); text-align: center;">
+                    <div style="font-size: 3em; color: #3498db; margin-bottom: 20px;">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 style="margin-bottom: 15px; color: #2c3e50;">Поддержка 24/7</h3>
+                    <p style="color: #7f8c8d;">Наша служба поддержки работает круглосуточно. Мы всегда готовы ответить на ваши вопросы и решить проблемы.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding: 80px 0; background-color: white;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Как мы работаем</h2>
+                <p>Простой и прозрачный процесс от обращения до получения результата</p>
+            </div>
+            
+            <div style="max-width: 900px; margin: 50px auto 0; position: relative;">
+                <div style="position: absolute; height: 100%; width: 4px; background-color: #3498db; left: 50%; transform: translateX(-50%); top: 0;"></div>
+                
+                <div style="display: flex; margin-bottom: 50px; position: relative; z-index: 1;">
+                    <div style="flex: 1; padding-right: 50px; text-align: right;">
+                        <h3 style="color: #2c3e50; margin-bottom: 10px;">Заявка</h3>
+                        <p style="color: #7f8c8d;">Вы оставляете заявку на сайте или звоните нам по телефону. Наш специалист уточняет детали проблемы.</p>
+                    </div>
+                    <div style="width: 50px; height: 50px; background-color: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 20px; z-index: 2;">1</div>
+                    <div style="flex: 1;"></div>
+                </div>
+
+                <div style="display: flex; margin-bottom: 50px; position: relative; z-index: 1;">
+                    <div style="flex: 1;"></div>
+                    <div style="width: 50px; height: 50px; background-color: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 20px; z-index: 2;">2</div>
+                    <div style="flex: 1; padding-left: 50px;">
+                        <h3 style="color: #2c3e50; margin-bottom: 10px;">Диагностика</h3>
+                        <p style="color: #7f8c8d;">Мы проводим детальную диагностику техники, определяем причины неисправности и составляем план ремонта.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; margin-bottom: 50px; position: relative; z-index: 1;">
+                    <div style="flex: 1; padding-right: 50px; text-align: right;">
+                        <h3 style="color: #2c3e50; margin-bottom: 10px;">Согласование</h3>
+                        <p style="color: #7f8c8d;">Мы сообщаем вам стоимость и сроки ремонта. Работы начинаются только после вашего подтверждения.</p>
+                    </div>
+                    <div style="width: 50px; height: 50px; background-color: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 20px; z-index: 2;">3</div>
+                    <div style="flex: 1;"></div>
+                </div>
+
+                <div style="display: flex; margin-bottom: 50px; position: relative; z-index: 1;">
+                    <div style="flex: 1;"></div>
+                    <div style="width: 50px; height: 50px; background-color: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 20px; z-index: 2;">4</div>
+                    <div style="flex: 1; padding-left: 50px;">
+                        <h3 style="color: #2c3e50; margin-bottom: 10px;">Ремонт</h3>
+                        <p style="color: #7f8c8d;">Наши специалисты выполняют все необходимые работы по ремонту и настройке вашей техники.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; position: relative; z-index: 1;">
+                    <div style="flex: 1; padding-right: 50px; text-align: right;">
+                        <h3 style="color: #2c3e50; margin-bottom: 10px;">Результат</h3>
+                        <p style="color: #7f8c8d;">Мы проводим финальное тестирование и передаем вам исправную технику с гарантией на выполненные работы.</p>
+                    </div>
+                    <div style="width: 50px; height: 50px; background-color: #3498db; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; margin: 0 20px; z-index: 2;">5</div>
+                    <div style="flex: 1;"></div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="index.html#orderSection" class="btn btn-accent">Оставить заявку</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="image/лого.webp" alt="ComProTehServis Logo" style="height: 40px;">
+                        <div class="logo-text" style="color: white;">ComProTeh<span>Servis</span></div>
+                    </div>
+                    <p style="color: #bdc3c7; margin-top: 15px;">Профессиональный ремонт компьютеров и техники с гарантией качества</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Ремонт компьютеров</a></li>
+                        <li><a href="#services">Ремонт ноутбуков</a></li>
+                        <li><a href="#services">Установка ПО</a></li>
+                        <li><a href="#services">Сборка пк</a></li>
+                        <li><a href="#services">Восстановление данных</a></li>
+                        <li><a href="#services">Настройка сети</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Пн-Пт: 9:00 - 18:00</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Сб-Вс: выходной</p>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Связаться с нами</h3>
+                    <ul>
+                        <p style="color: #bdc3c7; margin-top: 15px;">+7 (990) 110-44-64</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <li>
+                            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                <a href="https://vk.com/cpts.servis1" style="color: white;"><i class="fab fa-vk"></i></a>
+                                <a href="https://t.me/cpts_servis" style="color: white;"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ComProTehServis (CPTS). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

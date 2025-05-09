@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - ComProTehServis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <img src="image/лого.webp" alt="ComProTehServis Logo">
+                    <div class="logo-text">ComProTeh<span>Servis</span></div>
+                </div>
+                
+                <ul class="nav-links">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="reviews.html">Отзывы</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="dashboard.html" class="active">Личный кабинет</a></li>
+                </ul>
+                
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="dashboard">
+        <div class="container">
+            <div class="dashboard-container">
+                <!-- Sidebar -->
+                <div class="dashboard-sidebar">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="image/avatar.png" alt="Аватар пользователя">
+                        </div>
+                        <h3 class="user-name"></h3>
+                        <p class="user-email"></p>
+                    </div>
+                    
+                    <div class="dashboard-menu">
+                        <ul>
+                            <li><a href="#profile" class="active"><i class="fas fa-user"></i> Мой профиль</a></li>
+                            <li><a href="#orders"><i class="fas fa-clipboard-list"></i> Мои заказы</a></li>
+                            <li><a href="#security"><i class="fas fa-shield-alt"></i> Безопасность</a></li>
+                            <li><a href="/logout" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Выйти</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Dashboard Content -->
+                <div class="dashboard-content">
+                    <!-- Profile Settings Section -->
+                    <div id="profile">
+                        <h2>Настройки профиля</h2>
+                        
+                        <form id="profileForm" class="profile-settings">
+                            <!-- Personal Info -->
+                            <div class="form-group">
+                                <label for="profileName">Имя</label>
+                                <input type="text" id="profileName" class="form-control" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profileEmail">Email</label>
+                                <input type="email" id="profileEmail" class="form-control" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profilePhone">Телефон</label>
+                                <input type="tel" id="profilePhone" class="form-control" value="">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="profileAddress">Адрес</label>
+                                <input type="text" id="profileAddress" class="form-control" value="">
+                            </div>
+                            
+                            <!-- Profile Image -->
+                            <div class="form-group">
+                                <label>Фото профиля</label>
+                                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                                    <img src="image/avatar.png" alt="Аватар пользователя" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-right: 20px;">
+                                    <input type="file" id="profileImageInput" accept="image/*">
+                                </div>
+                            </div>
+                            
+                            <!-- Notifications Settings -->
+                            <div class="form-group">
+                                <label>Уведомления</label>
+                                <div style="margin-top: 10px;">
+                                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <input type="checkbox" id="emailNotifications" checked style="margin-right: 10px;">
+                                        <label for="emailNotifications">Получать уведомления по email</label>
+                                    </div>
+                                    
+                                    <div style="display: flex; align-items: center; margin-bottom: 10px;">
+                                        <input type="checkbox" id="smsNotifications" style="margin-right: 10px;">
+                                        <label for="smsNotifications">Получать SMS-уведомления</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                        </form>
+                    </div>
+                    
+                    <!-- Orders Section -->
+                    <div id="orders" style="display: none;">
+                        <h2>Мои заказы</h2>
+                        
+                        <!-- Current Orders -->
+                        <h3 style="margin: 30px 0 15px;">Текущие заказы</h3>
+                        <div class="order-list" id="currentOrders">
+                            <p>Нет текущих заказов.</p>
+                        </div>
+                        
+                        <!-- Completed Orders -->
+                        <h3 style="margin: 30px 0 15px;">Выполненные заказы</h3>
+                        <div class="order-list" id="completedOrders">
+                            <p>Нет выполненных заказов.</p>
+                        </div>
+                        
+                        <h3 style="margin: 30px 0 15px;">Отмененные заказы</h3>
+                        <div class="order-list" id="cancelledOrders">
+                            <p>Нет отмененных заказов.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Security Settings Section -->
+                    <div id="security" style="display: none;">
+                        <h2>Настройки безопасности</h2>
+                        
+                        <!-- Password Change -->
+                        <div class="security-card">
+                            <div class="security-card-header">
+                                <h3>Изменение пароля</h3>
+                            </div>
+                            <p style="margin-bottom: 20px; color: #7f8c8d;">Регулярно меняйте пароль для обеспечения безопасности вашей учетной записи</p>
+                            
+                            <form id="passwordChangeForm">
+                                <div class="form-group">
+                                    <label for="currentPassword">Текущий пароль</label>
+                                    <input type="password" id="currentPassword" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="newPassword">Новый пароль</label>
+                                    <input type="password" id="newPassword" class="form-control">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="confirmNewPassword">Подтвердите новый пароль</label>
+                                    <input type="password" id="confirmNewPassword" class="form-control">
+                                </div>
+                                
+                                <button type="submit" class="btn">Изменить пароль</button>
+                            </form>
+                        </div>
+                        
+                        <!-- Two Factor Authentication -->
+                        <div class="security-card">
+                            <div class="security-card-header">
+                                <h3>Двухфакторная аутентификация</h3>
+                                <label class="toggle">
+                                    <input type="checkbox" id="twoFactorToggle">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+                            <p style="margin-bottom: 20px; color: #7f8c8d;">Увеличьте безопасность вашей учетной записи, включив двухфакторную аутентификацию</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logout Modal -->
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span id="closeLogoutModal" class="modal-close">&times;</span>
+            <h2>Подтверждение выхода</h2>
+            <p>Вы уверены, что хотите выйти из личного кабинета?</p>
+            <div class="modal-buttons">
+                <button id="confirmLogout" class="btn btn-danger">Выйти</button>
+                <button id="cancelLogout" class="btn btn-primary">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2FA Setup Modal -->
+    <div id="twoFactorModal" class="modal">
+        <div class="modal-content">
+            <span id="closeTwoFactorModal" class="modal-close">&times;</span>
+            <h2>Настройка двухфакторной аутентификации</h2>
+            <p>Отсканируйте QR-код с помощью приложения аутентификатора (например, Google Authenticator) и введите код.</p>
+            <img id="twoFactorQR" src="" alt="QR Code" style="max-width: 150px; margin: 10px auto; display: block;">
+            <input type="text" id="twoFactorCode" class="form-control" placeholder="Введите 6-значный код" maxlength="6">
+            <div class="modal-buttons">
+                <button id="verifyTwoFactor" class="btn btn-primary">Подтвердить</button>
+                <button id="cancelTwoFactor" class="btn btn-danger">Отмена</button>
+            </div>
+        </div>
+    </div>
+
+   <!-- Модальное окно для оплаты -->
+<div id="paymentModal" class="modal">
+    <div class="modal-content" style="max-width: 500px;">
+        <span class="close" id="closePaymentModal">&times;</span>
+        <h2 style="margin-bottom: 20px;">Оплата заказа</h2>
+        
+        <div class="payment-info" style="background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+                <span style="font-weight: 500;">Услуга:</span>
+                <span id="paymentServiceName"></span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 18px;">
+                <span style="font-weight: 500;">Сумма:</span>
+                <span id="paymentAmount" style="color: #2ecc71; font-weight: 600;"></span>
+            </div>
+        </div>
+
+        <form id="paymentForm">
+            <div class="form-group">
+                <label for="cardNumber">Номер карты</label>
+                <div style="position: relative;">
+                    <input type="text" id="cardNumber" name="cardNumber" class="form-control" 
+                           placeholder="1234 5678 9012 3456" maxlength="19" required
+                           oninput="formatCardNumber(this)">
+                    <i class="far fa-credit-card" style="position: absolute; right: 10px; top: 12px; color: #7f8c8d;"></i>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="cardHolder">Имя держателя карты</label>
+                <input type="text" id="cardHolder" name="cardHolder" class="form-control" 
+                       placeholder="IVAN IVANOV" required>
+            </div>
+            
+            <div style="display: flex; gap: 15px;">
+                <div class="form-group" style="flex: 1;">
+                    <label for="cardExpiry">Срок действия</label>
+                    <input type="text" id="cardExpiry" name="cardExpiry" class="form-control" 
+                           placeholder="MM/ГГ" maxlength="5" required
+                           oninput="formatExpiryDate(this)">
+                </div>
+                
+                <div class="form-group" style="flex: 1;">
+                    <label for="cardCVC">CVC/CVV</label>
+                    <div style="position: relative;">
+                        <input type="text" id="cardCVC" name="cardCVC" class="form-control" 
+                               placeholder="123" maxlength="3" required>
+                        <i class="fas fa-lock" style="position: absolute; right: 10px; top: 12px; color: #7f8c8d;"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal-buttons" style="margin-top: 25px;">
+                <button type="submit" class="btn btn-primary" id="confirmPayment">
+                    <i class="fas fa-check-circle"></i> Оплатить
+                </button>
+                <button type="button" class="btn btn-secondary" id="cancelPayment">
+                    <i class="fas fa-times-circle"></i> Отмена
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="logo">
+                        <img src="image/лого.webp" alt="ComProTehServis Logo" style="height: 40px;">
+                        <div class="logo-text" style="color: white;">ComProTeh<span>Servis</span></div>
+                    </div>
+                    <p style="color: #bdc3c7; margin-top: 15px;">Профессиональный ремонт компьютеров и техники с гарантией качества</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Услуги</h3>
+                    <ul>
+                        <li><a href="#services">Ремонт компьютеров</a></li>
+                        <li><a href="#services">Ремонт ноутбуков</a></li>
+                        <li><a href="#services">Установка ПО</a></li>
+                        <li><a href="#services">Сборка пк</a></li>
+                        <li><a href="#services">Восстановление данных</a></li>
+                        <li><a href="#services">Настройка сети</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Информация</h3>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="reviews.html">Отзывы</a></li>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Пн-Пт: 9:00 - 18:00</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">Сб-Вс: выходной</p>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Связаться с нами</h3>
+                    <ul>
+                        <p style="color: #bdc3c7; margin-top: 15px;">+7 (990) 110-44-64</p>
+                        <p style="color: #bdc3c7; margin-top: 15px;">г. Мелитополь</p>
+                        <li>
+                            <div style="display: flex; gap: 10px; margin-top: 15px;">
+                                <a href="https://vk.com/cpts.servis1" style="color: white;"><i class="fab fa-vk"></i></a>
+                                <a href="https://t.me/cpts_servis" style="color: white;"><i class="fab fa-telegram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2024 ComProTehServis (CPTS). Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'93bb08ce8e27c95e',t:'MTc0NjU2MTMxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
